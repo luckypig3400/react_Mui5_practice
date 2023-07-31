@@ -1,4 +1,5 @@
-import { Button } from "@mui/material"
+import { Button } from "@mui/material";
+import SettingsIcon from '@mui/icons-material/Settings';
 
 function App() {
   return (
@@ -12,7 +13,14 @@ function App() {
       <Button variant="contained" color="secondary" size="small">Secondary Color</Button>
       <Button variant="contained" color="warning">Warning</Button>
       <Button variant="outlined" color="info" >info</Button>
-
+      <br />
+      <Button
+        startIcon={<SettingsIcon />}
+        variant="contained"
+        color="success"
+      >
+        Settings
+      </Button>
     </div>
   )
 }
