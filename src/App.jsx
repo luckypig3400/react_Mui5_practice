@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import SettingsIcon from '@mui/icons-material/Settings';
+import { Settings as SettingsIcon, Add as AddIcons, AccessAlarm as AccessAlarmIcon } from '@mui/icons-material';
 
 function App() {
   return (
@@ -20,6 +20,20 @@ function App() {
         color="success"
       >
         Settings
+      </Button>
+      <Button
+        startIcon={<AddIcons />}
+        variant="contained"
+        color="primary"
+      >
+        Add New Post
+      </Button>
+      <Button
+        startIcon={<AccessAlarmIcon />}
+        variant="contained"
+        color="secondary"
+      >
+        排程發文
       </Button>
     </div>
   )
