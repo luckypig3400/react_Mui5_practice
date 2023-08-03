@@ -6,8 +6,23 @@ function App() {
     <div>
       <Typography variant="h3" component="p">
         使用p tag但是有著h3 style
-      </Typography>;
+      </Typography>
 
+      <hr />
+      <Button variant="contained"
+        sx={{
+          backgroundColor: "skyblue", color: "#333", margin: 5,
+          "&:hover": {
+            backgroundColor: "lightblue"
+          },
+          "&:disabled": {
+            backgroundColor: "darkgray",
+            color: "white"
+          }
+        }}
+      >
+        使用sx客製化Button
+      </Button>
       <hr />
       <Button variant="text">Text</Button>
       <Button variant="contained" disabled>Disabled</Button>
