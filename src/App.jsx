@@ -11,7 +11,7 @@ function App() {
       </Typography>
 
       <hr />
-      <MyCustomButton />
+      <MyCustomButton disabled="disabled" />
       <MyCustomButton />
       <hr />
       <Button variant="text">Text</Button>

@@ -1,10 +1,10 @@
 import { Button } from '@mui/material'
 import React from 'react'
 
-function MyCustomButton() {
+function MyCustomButton(props) {
   return (
     <div>
-      <Button variant="contained"
+      <Button variant="contained" disabled={props.disabled}
         sx={{
           backgroundColor: "skyblue", color: "#333", margin: 5,
           "&:hover": {
