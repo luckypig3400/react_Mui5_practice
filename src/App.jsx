@@ -1,9 +1,14 @@
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Settings as SettingsIcon, Add as AddIcons, AccessAlarm as AccessAlarmIcon } from '@mui/icons-material';
 
 function App() {
   return (
     <div>
+      <Typography variant="h3" component="p">
+        使用p tag但是有著h3 style
+      </Typography>;
+
+      <hr />
       <Button variant="text">Text</Button>
       <Button variant="contained" disabled>Disabled</Button>
       <Button variant="contained">Contained</Button>
