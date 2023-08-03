@@ -1,5 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import { Settings as SettingsIcon, Add as AddIcons, AccessAlarm as AccessAlarmIcon } from '@mui/icons-material';
+import MyCustomButton from "./components/MyCustomButton";
+
 
 function App() {
   return (
@@ -9,20 +11,8 @@ function App() {
       </Typography>
 
       <hr />
-      <Button variant="contained"
-        sx={{
-          backgroundColor: "skyblue", color: "#333", margin: 5,
-          "&:hover": {
-            backgroundColor: "lightblue"
-          },
-          "&:disabled": {
-            backgroundColor: "darkgray",
-            color: "white"
-          }
-        }}
-      >
-        使用sx客製化Button
-      </Button>
+      <MyCustomButton />
+      <MyCustomButton />
       <hr />
       <Button variant="text">Text</Button>
       <Button variant="contained" disabled>Disabled</Button>
