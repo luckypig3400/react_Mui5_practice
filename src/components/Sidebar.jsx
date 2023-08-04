@@ -6,6 +6,13 @@ export default function Sidebar() {
     <Box bgcolor="lightpink"
       flex={10}
       p={2}
+      sx={{
+        display: {
+          xs: "none",
+          sm: "none",
+          md: "block"
+        }
+      }}
     >
       Sidebar
     </Box>
