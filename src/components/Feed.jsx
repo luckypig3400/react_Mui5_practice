@@ -1,9 +1,10 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 export default function Feed() {
   return (
-    <div>
-
-    </div>
+    <Box>
+      Feed
+    </Box>
   )
 }
