@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { AppBar, Toolbar, Typography } from '@mui/material'
+import { AppBar, InputBase, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import LuckyPigIcon from '@mui/icons-material/SavingsSharp';
 // Icons Reference:
@@ -10,6 +10,13 @@ const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
 });
 
+const Search = styled("div")(({ theme }) => ({
+  backgroundColor: "white",
+  padding: "5px 20px",
+  borderRadius: theme.shape.borderRadius,
+  width: "36%"
+}))
+
 export default function Navbar() {
   return (
     <AppBar position="sticky">
@@ -18,6 +25,8 @@ export default function Navbar() {
           LuckyPig
         </Typography>
         <LuckyPigIcon sx={{ display: { xs: "block", sm: "none" } }} />
+
+        <Search><InputBase placeholder='Search...' /></Search>
       </StyledToolbar>
     </AppBar>
   )
