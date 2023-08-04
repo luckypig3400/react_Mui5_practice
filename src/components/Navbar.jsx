@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
-import { AppBar, InputBase, Toolbar, Typography } from '@mui/material'
+import { AppBar, Badge, Box, InputBase, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import LuckyPigIcon from '@mui/icons-material/SavingsSharp';
+import MailIcon from '@mui/icons-material/Mail';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 // Icons Reference:
 // https://mui.com/material-ui/material-icons/?query=pig&theme=Sharp&selected=SavingsSharp
 
@@ -17,6 +19,10 @@ const Search = styled("div")(({ theme }) => ({
   width: "36%"
 }))
 
+const IconsContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "transparent",
+}))
+
 export default function Navbar() {
   return (
     <AppBar position="sticky">
@@ -27,6 +33,15 @@ export default function Navbar() {
         <LuckyPigIcon sx={{ display: { xs: "block", sm: "none" } }} />
 
         <Search><InputBase placeholder='Search...' /></Search>
+
+        <IconsContainer>
+          <Badge badgeContent={36} color="secondary">
+            <MailIcon color="action" />
+          </Badge>
+          <Badge>
+            <NotificationsIcon />
+          </Badge>
+        </IconsContainer>
       </StyledToolbar>
     </AppBar>
   )
