@@ -24,6 +24,15 @@ const IconsContainer = styled(Box)(({ theme }) => ({
 }))
 
 export default function Navbar() {
+  const BadgeStyle = {
+    marginLeft: "10px",
+    "&:hover": {
+      color: "darkgray",
+      cursor: "pointer",
+      // https://stackoverflow.com/questions/61386781/change-cursor-type-material-ui-expansion-panel
+    }
+  }
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -35,10 +44,10 @@ export default function Navbar() {
         <Search><InputBase placeholder='Search...' /></Search>
 
         <IconsContainer>
-          <Badge badgeContent={36} color="secondary">
+          <Badge sx={BadgeStyle} badgeContent={36} color="secondary">
             <MailIcon color="action" />
           </Badge>
-          <Badge>
+          <Badge sx={BadgeStyle}>
             <NotificationsIcon />
           </Badge>
         </IconsContainer>
