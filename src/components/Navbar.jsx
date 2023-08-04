@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { AppBar, Badge, Box, InputBase, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import LuckyPigIcon from '@mui/icons-material/SavingsSharp';
 import MailIcon from '@mui/icons-material/Mail';
@@ -21,11 +21,20 @@ const Search = styled("div")(({ theme }) => ({
 
 const IconsContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "transparent",
+  display: "flex",
+  gap: "20px",
+  alignItems: "center"
+}))
+
+const UserBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "10px",
+  alignItems: "center"
 }))
 
 export default function Navbar() {
   const BadgeStyle = {
-    marginLeft: "10px",
+    // marginLeft: "10px",
     "&:hover": {
       color: "darkgray",
       cursor: "pointer",
@@ -51,6 +60,10 @@ export default function Navbar() {
             <NotificationsIcon />
           </Badge>
         </IconsContainer>
+
+        <UserBox>
+          <Avatar sx={{ width: 30, height: 30 }} />
+        </UserBox>
       </StyledToolbar>
     </AppBar>
   )
