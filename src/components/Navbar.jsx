@@ -70,7 +70,7 @@ export default function Navbar() {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <div>
+        <Box sx={{ display: { xs: "flex", md: "none" } }}>
           {['left'].map((anchor) => (
             <React.Fragment key={anchor}>
               <IconButton
@@ -91,7 +91,7 @@ export default function Navbar() {
               </Drawer>
             </React.Fragment>
           ))}
-        </div>
+        </Box>
 
         <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" } }}>
           LuckyPig
