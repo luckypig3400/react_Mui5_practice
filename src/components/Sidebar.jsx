@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemButton } from '@mui/material'
+import { Box, List, ListItem, ListItemButton, Switch } from '@mui/material'
 import React from 'react'
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -9,6 +9,7 @@ import MarketplaceIcon from '@mui/icons-material/Store';
 import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 
 export default function Sidebar() {
   return (
@@ -78,6 +79,14 @@ export default function Sidebar() {
               <AccountCircleIcon />
             </ListItemIcon>
             <ListItemText primary="Profile" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component='a' href='#'>
+            <ListItemIcon>
+              <ModeNightIcon />
+            </ListItemIcon>
+            <Switch></Switch>
           </ListItemButton>
         </ListItem>
       </List>
