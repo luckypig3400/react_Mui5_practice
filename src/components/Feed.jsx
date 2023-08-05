@@ -1,8 +1,8 @@
-import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, IconButton, Typography } from '@mui/material'
+import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography } from '@mui/material'
 import React from 'react'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
+import { Favorite, FavoriteBorder } from '@mui/icons-material';
 
 export default function Feed() {
   return (
@@ -27,7 +27,7 @@ export default function Feed() {
         />
         <CardMedia
           component="img"
-          height="194"
+          height="20%"
           image="public/vite.svg"
           alt="Vite User"
         />
@@ -40,7 +40,10 @@ export default function Feed() {
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+            <Checkbox
+              icon={<FavoriteBorder />}
+              checkedIcon={<Favorite sx={{ color: "red" }} />}
+            />
           </IconButton>
           <IconButton aria-label="share">
             <ShareIcon />
