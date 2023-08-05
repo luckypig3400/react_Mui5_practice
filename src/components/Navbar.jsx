@@ -21,15 +21,21 @@ const Search = styled("div")(({ theme }) => ({
 
 const IconsContainer = styled(Box)(({ theme }) => ({
   backgroundColor: "transparent",
-  display: "flex",
+  display: "none",
   gap: "20px",
-  alignItems: "center"
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex",
+  }
 }))
 
 const UserBox = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: "10px",
-  alignItems: "center"
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    display: "none",
+  }
 }))
 
 export default function Navbar() {
@@ -59,10 +65,18 @@ export default function Navbar() {
           <Badge sx={BadgeStyle}>
             <NotificationsIcon />
           </Badge>
+          <Avatar
+            sx={{ width: 30, height: 30, }}
+            src='https://mui.com/static/images/avatar/3.jpg'
+          />
         </IconsContainer>
 
         <UserBox>
-          <Avatar sx={{ width: 30, height: 30 }} />
+          <Avatar
+            sx={{ width: 30, height: 30 }}
+            src='https://mui.com/static/images/avatar/3.jpg'
+          />
+          <Typography variant='span'>Amy</Typography>
         </UserBox>
       </StyledToolbar>
     </AppBar>
