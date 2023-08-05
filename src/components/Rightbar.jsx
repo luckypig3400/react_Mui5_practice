@@ -12,7 +12,8 @@ export default function Rightbar() {
         }
       }}
     >
-      <Box position="fixed" width={300}>
+      <Box position="fixed" sx={{ maxHeight: "100%", overflow: "auto", maxWidth: "36%" }}>
+        {/* https://stackoverflow.com/questions/43788878/scrollable-list-component-from-material-ui-in-react */}
         <Typography variant='h6' fontWeight={100}>
           Online Friends
         </Typography>
