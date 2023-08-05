@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { AppBar, Avatar, Badge, Box, InputBase, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 import LuckyPigIcon from '@mui/icons-material/SavingsSharp';
 import MailIcon from '@mui/icons-material/Mail';
@@ -79,6 +79,24 @@ export default function Navbar() {
           <Typography variant='span'>Amy</Typography>
         </UserBox>
       </StyledToolbar>
+
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={true}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   )
 }
