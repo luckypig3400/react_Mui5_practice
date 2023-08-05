@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import LuckyPigIcon from '@mui/icons-material/SavingsSharp';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -48,6 +48,8 @@ export default function Navbar() {
     }
   }
 
+  const [open, setOpen] = useState(false)
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
@@ -68,10 +70,11 @@ export default function Navbar() {
           <Avatar
             sx={{ width: 30, height: 30, }}
             src='https://mui.com/static/images/avatar/3.jpg'
+            onClick={e => setOpen(true)}
           />
         </IconsContainer>
 
-        <UserBox>
+        <UserBox onClick={e => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
             src='https://mui.com/static/images/avatar/3.jpg'
@@ -83,7 +86,8 @@ export default function Navbar() {
       <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
-        open={true}
+        open={open}
+        onClose={e => setOpen(false)}
         anchorOrigin={{
           vertical: 'top',
           horizontal: 'right',
