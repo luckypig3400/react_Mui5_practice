@@ -1,9 +1,11 @@
 import styled from '@emotion/styled'
-import { AppBar, Avatar, Badge, Box, InputBase, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Badge, Box, Drawer, IconButton, InputBase, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import LuckyPigIcon from '@mui/icons-material/SavingsSharp';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import MenuIcon from '@mui/icons-material/Menu';
+import SidebarMobile from './SidebarMobile';
 // Icons Reference:
 // https://mui.com/material-ui/material-icons/?query=pig&theme=Sharp&selected=SavingsSharp
 
@@ -50,9 +52,47 @@ export default function Navbar() {
 
   const [open, setOpen] = useState(false)
 
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
   return (
     <AppBar position="sticky">
       <StyledToolbar>
+        <div>
+          {['left'].map((anchor) => (
+            <React.Fragment key={anchor}>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer(anchor, true)}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                <SidebarMobile />
+              </Drawer>
+            </React.Fragment>
+          ))}
+        </div>
+
         <Typography variant='h6' sx={{ display: { xs: "none", sm: "block" } }}>
           LuckyPig
         </Typography>
@@ -101,6 +141,6 @@ export default function Navbar() {
         <MenuItem>My account</MenuItem>
         <MenuItem>Logout</MenuItem>
       </Menu>
-    </AppBar>
+    </AppBar >
   )
 }

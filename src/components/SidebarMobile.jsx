@@ -18,9 +18,7 @@ export default function Sidebar() {
       p={2}
       sx={{
         display: {
-          xs: "none",
-          sm: "none",
-          md: "block"
+          xs: "block"
         }
       }}
     >
