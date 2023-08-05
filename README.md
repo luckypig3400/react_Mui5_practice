@@ -4,8 +4,8 @@
 ## 此專案依照以下影片進行練習
 + https://youtu.be/fzxEECHnsvU
 
-### 接下來從這邊開始跟著影片練習
-+ https://youtu.be/fzxEECHnsvU?t=540
-
 ### 不過先把整部影片看完一遍後再開始一邊跟著影片練習
 (已完成)
+
+## To-do List
+- [ ] 嘗試把Rightbar元件裡的itemData變成存取靜態json檔
