@@ -1,4 +1,4 @@
-import { Avatar, Box, Fab, Modal, Tooltip, Typography } from '@mui/material'
+import { Avatar, Box, Fab, Modal, TextField, Tooltip, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import styled from '@emotion/styled';
@@ -43,6 +43,15 @@ export default function AddPost() {
             />
             <Typography>Contents</Typography>
           </UserBox>
+
+          <TextField
+            sx={{ width: "100%" }}
+            id="create-post-multiline-textfield"
+            multiline
+            rows={6}
+            placeholder="What's on your mind?"
+            variant="standard"
+          />
         </Box>
       </Modal>
     </>
