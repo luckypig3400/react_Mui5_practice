@@ -91,9 +91,10 @@ const modalStyle = {
 }
 
 const modalBoxStyle = {
-  width: "66%",
+  width: { xs: "90%", md: "66%" },
   height: "80%",
-  bgcolor: "wheat",
+  bgcolor: "background.default",
+  color: "text.primary",
   padding: 3,
   borderRadius: 5
 }
