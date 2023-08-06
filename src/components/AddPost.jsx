@@ -1,4 +1,4 @@
-import { Avatar, Box, Fab, Modal, Stack, TextField, Tooltip, Typography } from '@mui/material'
+import { Avatar, Box, Button, ButtonGroup, Fab, Modal, Stack, TextField, Tooltip, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import styled from '@emotion/styled';
@@ -6,6 +6,7 @@ import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import ImageIcon from '@mui/icons-material/Image';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import DateRangeIcon from '@mui/icons-material/DateRange';
 
 export default function AddPost() {
   const [open, setOpen] = useState(false);
@@ -63,6 +64,12 @@ export default function AddPost() {
             <VideocamIcon color='success' />
             <PersonAddAlt1Icon color='error' />
           </Stack>
+
+          <ButtonGroup variant="contained" fullWidth aria-label="outlined primary button group">
+            <Button>Post</Button>
+            <Button sx={{ width: "100px" }} color="info"><DateRangeIcon /></Button>
+            <Button color="error">Discard</Button>
+          </ButtonGroup>
         </Box>
       </Modal>
     </>
