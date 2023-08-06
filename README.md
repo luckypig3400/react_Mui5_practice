@@ -9,3 +9,5 @@
 
 ## To-do List
 - [ ] 嘗試把Rightbar元件裡的itemData變成存取靜態json檔
+- [ ] react global state(實作dark mode的存取，這樣就不用透過元件一層一層傳遞下去)
+- [x] 最後build react專案可參考: https://youtu.be/fzxEECHnsvU?t=4401
