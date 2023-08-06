@@ -1,7 +1,11 @@
-import { Avatar, Box, Fab, Modal, TextField, Tooltip, Typography } from '@mui/material'
+import { Avatar, Box, Fab, Modal, Stack, TextField, Tooltip, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import styled from '@emotion/styled';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import ImageIcon from '@mui/icons-material/Image';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 export default function AddPost() {
   const [open, setOpen] = useState(false);
@@ -52,6 +56,13 @@ export default function AddPost() {
             placeholder="What's on your mind?"
             variant="standard"
           />
+
+          <Stack direction="row" gap={2} mt={2} mb={2}>
+            <EmojiEmotionsIcon color='primary' />
+            <ImageIcon color="secondary" />
+            <VideocamIcon color='success' />
+            <PersonAddAlt1Icon color='error' />
+          </Stack>
         </Box>
       </Modal>
     </>
