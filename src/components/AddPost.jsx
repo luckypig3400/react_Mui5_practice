@@ -1,6 +1,7 @@
-import { Box, Fab, Modal, Tooltip, Typography } from '@mui/material'
+import { Avatar, Box, Fab, Modal, Tooltip, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import AddIcon from '@mui/icons-material/Add';
+import styled from '@emotion/styled';
 
 export default function AddPost() {
   const [open, setOpen] = useState(false);
@@ -36,14 +37,24 @@ export default function AddPost() {
           >
             Create Post
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Contents
-          </Typography>
+          <UserBox>
+            <Avatar src='https://mui.com/static/images/avatar/3.jpg'
+              sx={{ width: 30, height: 30 }}
+            />
+            <Typography>Contents</Typography>
+          </UserBox>
         </Box>
       </Modal>
     </>
   )
 }
+
+const UserBox = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  marginBottom: "20px"
+})
 
 const modalStyle = {
   display: "flex",
