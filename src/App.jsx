@@ -8,7 +8,7 @@ import { Box, Stack, ThemeProvider, createTheme } from "@mui/material"
 import AddPost from "./components/AddPost"
 
 function App() {
-  const [themeMode, setThemeMode] = useState("dark");
+  const [themeMode, setThemeMode] = useState("light");
   const darkTheme = createTheme({
     palette: {
       mode: themeMode,
@@ -27,7 +27,7 @@ function App() {
           spacing={2}
           justifyContent="space-between"
         >
-          <Sidebar />
+          <Sidebar setMode={setThemeMode} mode={themeMode} />
           <Feed />
           <Rightbar />
         </Stack>
