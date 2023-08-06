@@ -21,7 +21,7 @@ function App() {
         bgcolor={"background.default"}
         color={"text.primary"}
       >
-        <Navbar />
+        <Navbar setMode={setThemeMode} mode={themeMode} />
         <Stack
           direction="row"
           spacing={2}

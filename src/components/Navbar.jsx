@@ -40,7 +40,7 @@ const UserBox = styled(Box)(({ theme }) => ({
   }
 }))
 
-export default function Navbar() {
+export default function Navbar({ mode, setMode }) {
   const BadgeStyle = {
     // marginLeft: "10px",
     "&:hover": {
@@ -87,7 +87,7 @@ export default function Navbar() {
                 open={state[anchor]}
                 onClose={toggleDrawer(anchor, false)}
               >
-                <SidebarMobile />
+                <SidebarMobile mode={mode} setMode={setMode} />
               </Drawer>
             </React.Fragment>
           ))}

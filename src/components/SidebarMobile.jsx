@@ -11,7 +11,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 
-export default function Sidebar() {
+export default function SidebarMobile({ mode, setMode }) {
   return (
     <Box bgcolor="transparent"
       flex={10}
@@ -84,7 +84,9 @@ export default function Sidebar() {
             <ListItemIcon>
               <ModeNightIcon />
             </ListItemIcon>
-            <Switch></Switch>
+            <Switch onChange={
+              e => setMode(mode === "light" ? "dark" : "light")
+            }></Switch>
           </ListItemButton>
         </ListItem>
       </List>
