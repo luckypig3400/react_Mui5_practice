@@ -25,10 +25,16 @@ export default function AddPost() {
         onClose={e => setOpen(false)}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={modalStyle}
       >
         <Box sx={modalBoxStyle}>
-          <Typography id="modal-modal-title" variant="h6">
-            Title
+          <Typography
+            id="modal-modal-title"
+            variant="h6"
+            color="gray"
+            textAlign="center"
+          >
+            Create Post
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Contents
@@ -39,4 +45,17 @@ export default function AddPost() {
   )
 }
 
-const modalBoxStyle = { display: "grid", alignItems: "center", marginTop: "30vh", margin: 10 }
+const modalStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: 10,
+}
+
+const modalBoxStyle = {
+  width: "66%",
+  height: "80%",
+  bgcolor: "wheat",
+  padding: 3,
+  borderRadius: 5
+}
