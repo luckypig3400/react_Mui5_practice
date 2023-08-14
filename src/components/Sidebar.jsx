@@ -16,6 +16,7 @@ export default function Sidebar({ mode, setMode }) {
     <Box bgcolor="transparent"
       flex={10}
       p={2}
+      marginRight={6}
       sx={{
         display: {
           xs: "none",
