@@ -28,7 +28,7 @@ export default function Sidebar({ mode, setMode }) {
       <Box sx={{ position: "fixed" }}>
         <List>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='/'>
+            <ListItemButton component='a' href='#/'>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
@@ -36,7 +36,7 @@ export default function Sidebar({ mode, setMode }) {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='/page1'>
+            <ListItemButton component='a' href='#/page1'>
               <ListItemIcon>
                 <PagesIcon />
               </ListItemIcon>
@@ -44,7 +44,7 @@ export default function Sidebar({ mode, setMode }) {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='/page2'>
+            <ListItemButton component='a' href='#/page2'>
               <ListItemIcon>
                 <PagesIcon />
               </ListItemIcon>
@@ -52,7 +52,7 @@ export default function Sidebar({ mode, setMode }) {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component='a' href='/page3'>
+            <ListItemButton component='a' href='#/page3'>
               <ListItemIcon>
                 <PagesIcon />
               </ListItemIcon>
