@@ -10,7 +10,7 @@ import { GlobalVariablesProvider } from "./GlobalVariablesContext"
 import Page1 from "./pages/Page1"
 import Page2 from "./pages/Page2"
 import Page3 from "./pages/Page3"
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -35,14 +35,14 @@ function App() {
           >
             <Sidebar setMode={setThemeMode} mode={themeMode} />
 
-            <BrowserRouter>
+            <HashRouter>
               <Routes>
                 <Route path="/" element={<Feed />} />
                 <Route path="page1" element={<Page1 />} />
                 <Route path="page2" element={<Page2 />} />
                 <Route path="page3" element={<Page3 />} />
               </Routes>
-            </BrowserRouter>
+            </HashRouter>
 
             <Rightbar />
           </Stack>
