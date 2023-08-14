@@ -6,6 +6,10 @@ import Feed from "./components/Feed"
 import Rightbar from "./components/Rightbar"
 import { Box, Stack, ThemeProvider, createTheme } from "@mui/material"
 import AddPost from "./components/AddPost"
+import { CounterProvider } from "./globalStates/CounterContext"
+import Page1 from "./pages/Page1"
+import Page2 from "./pages/Page2"
+import Page3 from "./pages/Page3"
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -17,6 +21,12 @@ function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
+      <CounterProvider>
+        <Page1 />
+        <Page2 />
+        <Page3 />
+      </CounterProvider>
+
       <Box
         bgcolor={"background.default"}
         color={"text.primary"}
