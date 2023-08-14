@@ -1,9 +1,8 @@
-// CounterContext.js
 import { createContext, useContext, useState } from 'react';
 
-const CounterContext = createContext();
+const GlobalVariablesContext = createContext();
 
-export function CounterProvider({ children }) {
+export function GlobalVariablesProvider({ children }) {
   const [count, setCount] = useState(0);
 
   const increment = () => {
@@ -15,12 +14,12 @@ export function CounterProvider({ children }) {
   };
 
   return (
-    <CounterContext.Provider value={{ count, increment, decrement }}>
+    <GlobalVariablesContext.Provider value={{ count, increment, decrement }}>
       {children}
-    </CounterContext.Provider>
+    </GlobalVariablesContext.Provider>
   );
 }
 
 export function useCounter() {
-  return useContext(CounterContext);
+  return useContext(GlobalVariablesContext);
 }

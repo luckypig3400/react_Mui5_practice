@@ -1,6 +1,6 @@
 // Page1.js
 import React from 'react';
-import { useCounter } from '../globalStates/CounterContext';
+import { useCounter } from '../GlobalVariablesContext';
 
 function Page1() {
   const { count, increment, decrement } = useCounter();
