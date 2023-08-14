@@ -24,7 +24,7 @@ export default function SidebarMobile({ mode, setMode }) {
     >
       <List>
         <ListItem disablePadding>
-          <ListItemButton component='a' href='#home'>
+          <ListItemButton component='a' href='/'>
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
@@ -32,11 +32,27 @@ export default function SidebarMobile({ mode, setMode }) {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton component='a' href='#pages'>
+          <ListItemButton component='a' href='/page1'>
             <ListItemIcon>
               <PagesIcon />
             </ListItemIcon>
-            <ListItemText primary="Pages" />
+            <ListItemText primary="Page1" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component='a' href='/page2'>
+            <ListItemIcon>
+              <PagesIcon />
+            </ListItemIcon>
+            <ListItemText primary="Page2" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton component='a' href='/page3'>
+            <ListItemIcon>
+              <PagesIcon />
+            </ListItemIcon>
+            <ListItemText primary="Page3" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
