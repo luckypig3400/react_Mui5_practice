@@ -1,6 +1,7 @@
 // Page1.js
 import React from 'react';
 import { useGlobalVariables } from '../GlobalVariablesContext';
+import { Box } from '@mui/material';
 
 function Page1() {
   const {
@@ -16,7 +17,7 @@ function Page1() {
   } = useGlobalVariables();
 
   return (
-    <div>
+    <Box flex={55} p={2} height="100vh">
       <h2>Page 1</h2>
       <p>Counter 1: {counter1}</p>
       <button onClick={incrementCounter1}>Increment Counter 1</button>
@@ -29,7 +30,7 @@ function Page1() {
       <p>Counter 3: {counter3}</p>
       <button onClick={incrementCounter3}>Increment Counter 3</button>
       <button onClick={decrementCounter3}>Decrement Counter 3</button>
-    </div>
+    </Box >
   );
 }
 
