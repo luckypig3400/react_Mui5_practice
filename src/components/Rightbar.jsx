@@ -124,4 +124,4 @@ export default function Rightbar() {
 }
 
 const itemData = rightBarItems;
-console.log(rightBarItems);
+// console.log(rightBarItems);

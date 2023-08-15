@@ -10,8 +10,11 @@ import ContactsIcon from '@mui/icons-material/Contacts';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
+import { useGlobalVariables } from "../GlobalVariablesContext"
 
-export default function SidebarMobile({ mode, setMode }) {
+export default function SidebarMobile() {
+  const { themeMode, setThemeMode } = useGlobalVariables();
+
   return (
     <Box bgcolor="transparent"
       flex={10}
@@ -101,7 +104,7 @@ export default function SidebarMobile({ mode, setMode }) {
               <ModeNightIcon />
             </ListItemIcon>
             <Switch onChange={
-              e => setMode(mode === "light" ? "dark" : "light")
+              e => setThemeMode(themeMode === "light" ? "dark" : "light")
             }></Switch>
           </ListItemButton>
         </ListItem>
